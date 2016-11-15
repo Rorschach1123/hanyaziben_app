@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+
+<title>用户管理</title>
+</head>
+<body>
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span> 权限管理 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+  <div class="cl pd-5 bg-1 bk-gray">
+    <span class="l">
+      <a href="javascript:;" onClick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a>
+      <a class="btn btn-primary radius"  href="{:U('Admin/Auth/adduser')}" ><i class="icon-plus"></i> 添加用户</a>
+    </span>
+    <span class="r">共有数据：<strong>54</strong> 条</span>
+  </div>
+  <table class="table table-border table-bordered table-hover table-bg">
+    <thead>
+      <tr>
+        <th scope="col" colspan="6">用户管理</th>
+      </tr>
+      <tr class="text-c">
+        <th width="25"><input type="checkbox" value="" name=""></th>
+        <th width="20">ID</th>
+        <th width="100">账号</th>
+        <th width="100">真实姓名</th>
+        <th width="100">邮箱</th>
+        <th width="50">所属组</th>
+        <th width="50">注册日期</th>
+        <th width="70">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <foreach name="admins" item="vo">
+
+        <tr class="text-c">
+          <td><input type="checkbox" value="" name=""></td>
+          <td>{$vo['id']}</td>
+          <td>{$vo['username']}</td>
+          <td>{$vo['name']}</td>
+          <td>{$vo['email']}</td>
+          <td>{$vo['title']}</td>
+          <td>
+  {$vo['addtime']|date="y-m-d H:i:s",###}
+          </td>
+          <td class="f-14">
+           <a title="编辑" href="{:U('Admin/Auth/edituser',array('rid'=>$vo['id']))}" style="text-decoration:none"><i class="icon-edit"></i></a>
+          <a title="删除" href="{:U('Admin/Auth/deluser',array('rid'=>$vo['id']))}" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
+        </tr>
+      </foreach>
+
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/layer/layer.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script>
+
+</body>
+</html>

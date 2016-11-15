@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+
+<style type="text/css">
+</style>
+<title>图片管理</title>
+</head>
+<body>
+
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 图片管理 <span class="c-gray en">&gt;</span>  <span class="c-gray en">&gt;</span> 图片列表 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" id="ref" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+  <div class="text-c">
+  <form class="Huiform" action="{:U('Admin/Images/index')}" method="get">
+  <select class="input-small" id="DropDownTimezone" name="n">
+          <option value="10" <eq name="n" value="10"> selected = "selected"</eq>>10</option>
+          <option value="20" <eq name="n" value="20"> selected = "selected"</eq>>20</option>
+          <option value="30" <eq name="n" value="30"> selected = "selected"</eq>>30</option>
+          <option value="40" <eq name="n" value="40"> selected = "selected"</eq>>40</option>
+          <option value="50" <eq name="n" value="50"> selected = "selected"</eq>>50</option>
+          <option value="100" <eq name="n" value="100"> selected = "selected"</eq>>100</option>
+    </select>条
+  
+    <input type="text" name="k" id="" value="{$k}" placeholder=" " style="width:250px" class="input-text"><button name="" id="" class="btn btn-success" type="submit"><i class="icon-search"></i>搜索</button>
+  </div>
+  </form>
+  <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a> </a><a class="" href="javascript:;"<i class=""></i></a></span></a>
+   <span class="r">共有数据:<strong>{$count}</strong> 条</span> </div>
+  
+    <div class="cl pd-5 bg-1 bk-gray mt-20">
+    <a href="{:U('Admin/Images/add')}" class="btn btn-primary radius"><i class="icon-plus"></i> 添加数据</a></span>
+  </div>  
+  <table class="table table-border table-bordered table-bg table-hover table-sort">
+    <thead>
+      <tr class="text-c">
+        
+        <th width="50">图片ID</th>
+        <th width="50">标题</th>
+        <th width="100">图片(此处只显示首图)</th>
+        <th width="80">添加时间</th>
+        <th width="80">点击数</th>
+        <th width="50">状态</th>
+        <th width="150">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <foreach name="images" item="vo">
+      <tr class="text-c">
+       
+        <td>{$vo['id']}</td>
+        <td><a href="{:U('Admin/Images/detail')}?id={$vo['id']}">{$vo['title']}</a></td>
+        <td><img src="__PUBLIC__/uploads/images/{$vo.images}" width="50px"></td>
+        <td>{$vo['addtime']|date="Y-m-d",###}</td>
+        <td>{$vo['hits']}</td>
+        <td>{$vo['state'] ? "禁用":"启用"}</td>
+        
+              
+        <td class="f-14 picture-manage">
+        <!--  <a title="编辑" href="{:U('Admin/Images/edit')}?id={$vo['id']}" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i>编辑</a>  -->
+         <a title="删除" href="{:U('Admin/Images/delete')}?id={$vo['id']}"class="dell"><i ></i>删除</a>
+         <button class="icon-hand-up" love="bu1" title="显示"></button>
+         <button class="icon-hand-down" love="bu2" title="隐藏"></button>
+         
+      </tr>
+      </foreach>
+    </tbody>
+  </table>
+      
+        <div id="pageNav" class="pageNav">{$pages}</div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/layer/layer.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/pagenav.cn.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/plugin/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+  //状态启用
+  $("button[love=bu1]").click(function(){
+    var td = $(this).parents('tr').find('td:eq(4)');
+    //获取当前用户id的值
+    var id = $(this).parents('tr').find('td:first').html();
+    //设置启用状态
+    var st = 0;
+    $.post('{:U('Admin/Images/root')}',{state:st,id:id},function(data){
+      if(data == 0){
+          alert('更改成功');
+          td.html('启用');
+        }else{
+          alert('更改失败');
+        }
+    });
+  });
+
+  //状态禁用
+  $("button[love=bu2]").click(function(){
+    var td = $(this).parents('tr').find('td:eq(4)');
+    //获取当前用户id的值
+    var id = $(this).parents('tr').find('td:first').html();
+    var st = 1;
+    $.post('{:U('Admin/Images/root')}',{state:st,id:id},function(data){
+      if(data == 0){
+          alert('更改成功');
+          td.html('禁用');
+        }else{
+          alert('更改失败');
+        }
+    });
+  });
+
+ $('.dell').click(function(){
+        var res = confirm('是否删除当前信息');
+        if(res){
+            return true;
+        }else{
+            return false;
+        }
+    })
+   
+ </script>
+</body>
+</html>

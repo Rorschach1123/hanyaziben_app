@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
+body {  color:#333; font-family:"微软雅黑";line-height:24px;width:100%;height:100%; background-color:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html{width:100%;height:100%;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-o-text-size-adjust:none;-ms-text-size-adjust:none;text-size-adjust:none;}
+@media (min-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 414px) {
+  .jiluInfo ul li {
+    margin-top: 0.9vh
+  }
+}
+fieldset, img { border:0;}
+input{-webkit-appearance: none; }
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+em { font-style:normal; }
+input, button, select, textarea { outline:none; } 
+textarea { resize:none; }
+a{ color:#666; text-decoration:none;}
+a:hover{ color:#666; text-decoration:none;}
+a:link,a:visited,a:focus{ text-decoration: none; outline: none}
+*,*:after,*:before{-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.clearfix:after{
+  content:"";
+  visibility:hidden;
+  height:0;
+  display:block;
+  clear:both;
+}
+
+
+/* 
+Retina 适配
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+only screen and (min--moz-device-pixel-ratio: 2.0),
+only screen and (-o-min-device-pixel-ratio: 200/100),
+only screen and (min-device-pixel-ratio: 2.0) {
+  .sharetqtitle:before{
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+三倍屏 适配
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min--moz-device-pixel-ratio: 2.5),
+only screen and (-o-min-device-pixel-ratio: 250/100),
+only screen and (min-device-pixel-ratio: 2.5) {
+  .sharetqtitle:before{
+    -webkit-transform: scaleY(0.33333334);
+    transform: scaleY(0.33333334);
+  }
+}
+
+Retina 适配
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+only screen and (min--moz-device-pixel-ratio: 2.0),
+only screen and (-o-min-device-pixel-ratio: 200/100),
+only screen and (min-device-pixel-ratio: 2.0) {
+  .register-left:before{
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+}
+
+三倍屏 适配
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min--moz-device-pixel-ratio: 2.5),
+only screen and (-o-min-device-pixel-ratio: 250/100),
+only screen and (min-device-pixel-ratio: 2.5) {
+  .register-left:before{
+    -webkit-transform: scaleX(0.33333334);
+    transform: scaleX(0.33333334);
+  }
+} */
+
+
+
+/* 转盘 */
+.turntable{
+  width: 100%;
+  padding-top:115%;
+  background: url(../images/section_bg01.jpg) center top no-repeat #fff; 
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.zhuanpan{
+  width: 80%;
+  padding-top:83.9%;
+  background:url(../images/zhuanpan.png) center top no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+
+}
+.present{
+  width: 100%;
+  padding-top:28.9% ;
+  background: url(../images/present.png) center top no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2
+}
+canvas.item{
+  position: absolute;
+  top: 14px;
+  left: 6%;
+  width: 88%;
+  -webkit-transform: rotate(-164deg);
+  transform: rotate(-164deg);
+  white-space: nowrap;
+}
+.pointer{
+  position:absolute;
+  width:20%;
+  height:21.8%;
+  left:39.7%;
+  top:34%;
+  z-index: 55;
+}
+
+
+/*中奖纪录*/
+.jilu{
+  width: 100%;
+  height:auto;
+  background: url(../images/section_bg02.jpg) center top no-repeat #d9170d;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 30px
+}
+.zjjl{
+  padding-top: 40px;
+  margin-top: -1px
+}
+.jiluTitle{
+  width: 60%;
+  padding-top:9.6%;
+  background:url(../images/title.png) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: 2;
+  margin: 0 auto 20px;
+}
+.jiluContent{
+  width: 100%;
+  padding-top:64.5%;
+  background:url(../images/jilu_bg.png) center top no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.jiluInfo{
+  width: 59%;
+  height: 72%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  overflow: hidden;
+}
+.jiluInfoIn{
+  height: 200%;
+}
+.jiluInfo ul{
+  font-size: 0.9rem;
+  width: 100%;
+}
+.jiluInfo ul li{
+  margin-bottom:4px; 
+  overflow: hidden;
+  color: #333
+}
+.zhongjiangMobile{
+  float: left
+}
+.jiangpin{
+  float: right;
+}
+.changeBg{
+  background-image: url(../images/titlesmall.png);
+  margin:13px auto 0;
+  z-index: 1;
+  position: relative;
+}
+
+
+/*活动规则说明*/
+.descInfo{
+  width: 88%;
+  margin: 0 auto;
+  background-color: #f25951;
+  border-radius: 5px;
+  color: #fff;
+  font-size: .9rem;
+  padding: 30px 9px 15px;
+  margin-top: -17px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+/*免责声明*/
+.shengming{
+  width: 88%;
+  margin: 0 auto;
+  color: #fff;
+}
+h3.smTitle{
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 100;
+  padding: 12px 0 4px;
+}
+.smContent{
+  font-size: 0.9rem
+}
+
+
+/*中奖提示*/
+.black{
+  width: 100%;
+  height: 100%;
+  background: rgba(000,000,000,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display:none;
+}
+.remindInfo{
+  width:80% ;
+  padding-top:80.3% ;
+  background:url(../images/remind.png) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  z-index: 222;
+  display:none
+}
+.getaward{
+  width: 54%;
+  height: 13%;
+  border-radius: 50px;
+  border: 0;
+  -webkit-appearance: none;
+  background-color: #e22829;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: '黑体';
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  letter-spacing: 2px
+}
+.awardInfo{
+  width:40%;
+  padding-top:43.7%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%,-64%);
+  transform:translate(-50%,-64%);
+  background:url(../images/phone.png) center center no-repeat;
+  -webkit-background-size:cover;
+  background-size:cover;
+}
+.jiangpinTitle{
+  width: 100%;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  color: #a11700;
+  text-align: center;
+}
+
+
+
+/*手机充值*/
+.bill,.tip{
+  width: 80%;
+  height: 260px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 6
+}
+.billTitle{
+  padding: 8px 10px;
+  background-color:  #e60012;
+  color: #fff;
+}
+.phoneNumm{
+  width: 90%;
+  height: 38px;
+  padding: 8px;
+  border: none;
+  border: 1px solid #f1f1f1;
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 1px 1px #e4e4e4 inset;
+  border-radius: 3px;
+  color: #333;
+  margin: 30px 5% 0 5%;
+}
+.get_award{
+  text-align: center;
+  padding: 60px 0 20px;
+}
+.getButton,.ok{
+  width: 70%;
+  height: 36px;
+  border: none;
+  background-color: #e80000;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.0rem;
+  font-family: '微软雅黑';
+  border-radius: 3px;
+  text-align: center
+}
+.remindWord{
+  width: 90%;
+  margin: 30px auto 10px;
+  text-align:center;
+}
+
+.remindWord a{
+  color:#333;
+}
+
+.remindWord a:link{
+  color:#333;
+}
+
+.remindWord a:visited{
+  color:#333;
+}
+
+.remindWord a:hover{
+  color:#333;
+}
+
+.remindWord a:active{
+  color:#333;
+}

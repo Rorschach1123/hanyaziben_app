@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+
+<!-- <title>添加信息</title> -->
+</head>
+<body>
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span>资产管理 <span class="c-gray en">&gt;</span> 信息添加 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<title>信息添加</title>
+<div class="pd-20">
+  <div class="Huiform">
+    <form action="{:U('Admin/Asset/add_post')}" method="post" id="forms">
+      <table class="table table-bg">
+        <tbody>
+         <tr>
+            <th class="text-r"><span class="c-red"></span>产品名称:</th>
+            <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="productname"></td>
+          </tr>
+          
+          <tr>
+            <th class="text-r">客户姓名：</th>
+              <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="username"
+              </td>
+           </tr> 
+          <tr> 
+          <th class="text-r">回报率：</th>
+              <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="rate"
+              </td>
+          </tr> 
+           <tr> 
+          <th class="text-r">投资额：</th>
+              <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="camount"
+              </td>
+          </tr> 
+          <th class="text-r">合同到期日：</th>
+              <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="datetime"
+              </td>
+          </tr> 
+          <tr>
+            <th></th>
+            <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 添加</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/Validform_v5.3.2_min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script> 
+
+</body>
+</html>

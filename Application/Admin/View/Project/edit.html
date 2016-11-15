@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/lyz.calendar.css"/>
+<style>
+#announcement_dateCalendar{
+		top:754px;
+		left:144px;
+	}
+	#product_publishCalendar{
+		top:800px;
+		left:144px;
+	}
+	#over_dateCalendar{
+		top:846px;
+		left:144px;
+	}
+</style>
+<title>项目数据维护</title>
+</head>
+<body>
+ <nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span> 项目管理 <span class="c-gray en">&gt;</span> 项目信息维护 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<div class="pd-20">
+  <div class="Huiform">
+    <form action="{:U('Admin/Project/edit')}" method="post" id="forms">
+      <table class="table table-bg">
+        <tbody>
+        	<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 产品编号：</th>
+				<td>
+					<input type="hidden" name="id" value="{$info.id}">
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_number}" placeholder="" name="product_number">
+					<span id="notice"></span>
+				</td>
+			</tr>
+		   	<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 产品名称：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_name}" placeholder="" name="product_name">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 产品类型：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.share_type}" placeholder="" name="share_type">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 产品风险等级：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_risklv}" placeholder="" name="product_risklv">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 存续期限：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.investment_term}" placeholder="" name="investment_term">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 总认缴额：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_scale}" placeholder="" name="product_scale">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 产品认购费：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_subscribe}" placeholder="" name="product_subscribe">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 兑付收益率：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.cash_rate}" placeholder="" name="cash_rate">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 年化收益率：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.return_rate}" placeholder="" name="return_rate">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 收益分配：</th>
+				<td>
+					<textarea name="benefit_distribution" rows="5" cols="83">{$info.benefit_distribution}</textarea>
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 收益明细：</th>
+				<td>
+					<textarea name="return_detail" rows="5" cols="83">{$info.return_detail}</textarea>
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 成立日期：</th>
+				<td>
+					<input id="announcement_date" class="input-text" name="announcement_date" value="{$info.announcement_date}" />
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 发行日期：</th>
+				<td>
+  					<input id="product_publish" class="input-text" name="product_publish" value="{$info.product_publish}" />
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 兑付完成日期：</th>
+				<td>
+  					<input id="over_date" class="input-text" name="over_date" value="{$info.over_date}" />
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 佣金折标：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.commission_zblv}" placeholder="" name="commission_zblv">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 业绩折标：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.performance_zblv}" placeholder="" name="performance_zblv">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 募集期：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.collect_date}" placeholder="" name="collect_date">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 募集状态：</th>
+				<td>
+					<select name="product_state" class="input-text" style="width:210px;text-align:center">
+						<option value="预热中" hidden {$info['product_state']==''?'selected':''}>===&nbsp;&nbsp;请选择&nbsp;&nbsp;===</option>
+						<option value="预热中" {$info['product_state']=='预热中'?'selected':''}>预热中</option>
+						<option value="募集中" {$info['product_state']=='募集中'?'selected':''}>募集中</option>
+						<option value="已结束" {$info['product_state']=='已结束'?'selected':''}>已结束</option>
+					</select>
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 募集人数：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.product_population}" placeholder="" name="product_population">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 募集进度：</th>
+				<td>
+					<input type="text" style="width:500px" class="input-text" value="{$info.target_money}" placeholder="" name="target_money">
+					<span id="notice"></span>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 维护</button></td>
+			</tr>
+
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/Validform_v5.3.2_min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/lyz.calendar.min.js"></script>
+<script>
+    $(function () {
+    	$("#announcement_date").calendar();
+        $("#product_publish").calendar();
+        $("#over_date").calendar();
+    });
+</script>
+</body>
+</html>

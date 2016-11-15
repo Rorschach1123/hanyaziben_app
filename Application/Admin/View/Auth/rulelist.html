@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+
+<title>权限管理</title>
+</head>
+<body>
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span> 权限管理 <span class="c-gray en">&gt;</span> 权限管理 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+  <div class="cl pd-5 bg-1 bk-gray">
+    <span class="l">
+      <a class="btn btn-primary radius" href="{:U('Admin/Auth/addrule')}"><i class="icon-plus"></i> 添加规则</a>
+    </span>
+    <form class="Huiform" action="{:U('Admin/Auth/rulelist')}" method="get">
+  <select class="input-small" id="DropDownTimezone" name="n">
+           <option value="10" <eq name="n" value="10"> selected = "selected"</eq>>10</option>
+          <option value="20" <eq name="n" value="10"> selected = "selected"</eq>>20</option>
+          <option value="30" <eq name="n" value="20"> selected = "selected"</eq>>30</option>
+          <option value="40" <eq name="n" value="30"> selected = "selected"</eq>>40</option>
+          <option value="50" <eq name="n" value="50"> selected = "selected"</eq>>50</option>
+          <option value="100" <eq name="n" value="200"> selected = "selected"</eq>>100</option>
+    </select>条
+  <button name="" id="" class="btn btn-success" type="submit"><i class="icon-search"></i>搜索</button>
+  </form>
+    <span class="r">共有数据：<strong>{$count}</strong> 条</span>
+  </div>
+  <table class="table table-border table-bordered table-hover table-bg">
+    <thead>
+      <tr>
+        <th scope="col" colspan="6">规则管理</th>
+      </tr>
+      <tr class="text-c">
+        <th width="25"><input type="checkbox" value="" name=""></th>
+        <th width="20">权限ID</th>
+        <th width="200">结构</th>
+        <th width="100">名称</th>
+        <th width="70">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <foreach name="nodes" item="vo">
+
+        <tr class="text-c">
+          <td><input type="checkbox" value="" name=""></td>
+          <td>{$vo['id']}</td>
+          <td><?php echo str_repeat("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",$vo['level']);?>{$vo['title']}</td>
+          <td>{$vo['name']}</td>
+          <td class="f-14">
+          <a title="编辑" href="{:U('Admin/Auth/editrule',array('rid'=>$vo['id']))}" style="text-decoration:none"><i class="icon-edit"></i></a>
+          <a title="删除" href="{:U('Admin/Auth/delrule',array('rid'=>$vo['id']))}" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
+        </tr>
+      </foreach>
+      
+    </tbody>
+  </table>
+   <div class="pageNav" id="pageNav">{$pages}</div>
+  <div id="pageNav" class="pageNav"></div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/layer/layer.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script>
+
+</body>
+</html>

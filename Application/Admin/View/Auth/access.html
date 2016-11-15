@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+<style type="text/css">
+  *{margin:0px;padding:0px;list-style: none;}
+  ul li{
+    float:left;width:130px;height:35px;line-height: 35px;text-align: left;color:black;
+  }
+</style>
+
+<title>角色编辑</title>
+</head>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.1.8.1.js"></script>
+
+<body>
+<div class="pd-20">
+  <form class="Huiform" id="loginform" action="{:U('Admin/Auth/setaccess')}" method="post">  
+    <table class="table table-border table-bordered table-bg">
+      <tbody>
+        <tr>
+          <th class="text-r" width="120">您正在为用户组</th>
+          <td><span style="color:blue">{$title}&nbsp;&nbsp;分配权限</span>
+          <span style="color:red">(*)注意为每一位角色分配权限时,必须要把首页,首页上部,首页左边,首页右边选中,如若不选,会提示没有权限</span></td>
+        </tr>
+          <input type="hidden" name="title" value="{$title}">
+        <tr>
+          <th class="text-r va-t">权限：</th>
+          <td>
+           <p>
+          <label><input type="button" value="全选" class="btn" id="selectAll">   </label>
+            <label><input type="button" value="全不选" class="btn" id="unSelect">  </label> 
+            <label><input type="button" value="反选" class="btn" id="reverse">  </label>
+           </p>
+           <ul id="list">
+              <foreach name="rules" item="vo">
+              <li>
+                  <label name="name" value="{$vo.id}"> 
+                    <input name="access[]" value="{$vo['id']}" type="checkbox" <?php 
+                      if(in_array($vo['id'],$group_rule))
+                      {
+                        echo "checked='checked'";
+                      }
+                    ?> />&nbsp;&nbsp;&nbsp;{$vo.title}
+                    <?php ?>
+                  </label>
+                </li>
+             </foreach>
+           </ul>
+            <input type="hidden" name="id" value="{$id}">
+          </td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>
+            <input type="submit" class="btn btn-success radius icon-ok" id="admin-role-save" value="确定">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/Validform_v5.3.2_min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/layer/layer.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/Admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript">
+$(".Huiform").Validform(); 
+</script>
+<script type="text/javascript">
+  $("#selectAll").click(function(){ 
+    $("input[name='access[]']").each(function(){
+      this.checked=true;
+    });   
+}); 
+
+  $("#unSelect").click(function(){   
+    $("input[name='access[]']").each(function(){
+      this.checked=false;
+    }); 
+  });  
+
+  $("#reverse").click(function(){  
+    $("input[name='access[]'").each(function(){
+          if(this.checked==true)
+          {
+            this.checked=false;
+          }
+          else{
+            this.checked=true;
+          }
+    }); 
+}); 
+
+</script>
+</body>
+</html>

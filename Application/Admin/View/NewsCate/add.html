@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/H-ui.admin.css"/>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/font/font-awesome.min.css"/>
+
+</head>
+<body>
+<nav class="Hui-breadcrumb"><i class="icon-home"></i> 首页 <span class="c-gray en">&gt;</span>分类管理 <span class="c-gray en">&gt;</span> 分类添加 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="icon-refresh"></i></a></nav>
+<title>分类添加</title>
+</head>
+<body>
+
+<div class="pd-20">
+  <div class="Huiform">
+    <form action="{:U('Admin/NewsCate/insert')}" method="post">
+      <table class="table table-bg">
+        <tbody>
+          <tr>
+            <th class="text-r">分类名称:</th>
+            <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="" name="cate_name"></td>
+          </tr>
+          <tr>  
+            <th class="text-r">父级分类:</th>
+              <td><select name="pid" id="" style="width:320px" class="input-text">
+                 <option value="0">请选择</option>
+                  <foreach name="cates" item="vo">
+                  <option value="{$vo['id']}">{$vo['cate_name']}</option>
+                  </foreach>
+              </select>
+              </td>
+          </tr>
+          <tr>
+            <th></th>
+              <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 确定</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+</html>

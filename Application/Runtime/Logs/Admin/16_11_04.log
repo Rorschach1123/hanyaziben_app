@@ -1,0 +1,216 @@
+[ 2016-11-04T09:50:48+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0071s ]
+NOTIC: [8] Undefined index: picAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 11 行.
+NOTIC: [8] Undefined index: huxingAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 12 行.
+NOTIC: [8] Undefined index: huxingDetailAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 13 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001562s ]
+
+[ 2016-11-04T09:52:10+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0071s ]
+NOTIC: [8] Undefined index: picAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 11 行.
+NOTIC: [8] Undefined index: huxingAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 12 行.
+NOTIC: [8] Undefined index: huxingDetailAry D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 13 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2016-11-04T09:53:06+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0066s ]
+NOTIC: [8] Undefined index: huxingDetailary D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 13 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-11-04T09:53:35+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-11-04T09:54:34+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0065s ]
+NOTIC: [8] Array to string conversion D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 11 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 12 行.
+NOTIC: [8] Array to string conversion D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 13 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2016-11-04T09:59:24+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001840s ]
+
+[ 2016-11-04T10:00:09+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001426s ]
+
+[ 2016-11-04T10:02:43+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-11-04T10:02:51+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2016-11-04T10:03:25+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-11-04T10:03:55+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-11-04T10:04:27+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-11-04T10:05:36+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000789s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2016-11-04T10:05:50+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8] Use of undefined constant DB_CONFIG3 - assumed 'DB_CONFIG3' D:\wamp\www\hanyaziben_app\Application\Admin\Controller\WeeklyController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `fangchan_shuju` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `fangchan_shuju`  [ RunTime:0.0066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2016-11-04T14:28:52+08:00 ] ::1 /hanyaziben_app/index.php/Weekly/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `cw_service` [ RunTime:0.0074s ]
+SQL: SELECT `question`,`answer` FROM `cw_service` ORDER BY order_id asc  [ RunTime:0.0012s ]
+
