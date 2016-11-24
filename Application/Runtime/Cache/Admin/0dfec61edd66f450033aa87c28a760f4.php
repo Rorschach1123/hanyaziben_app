@@ -69,7 +69,7 @@
 
 
     <div class="row-fluid login-wrapper">
-        <a href="index.html">
+        <a href="<?php echo U('Index/index');?>">
             <img class="logo" src="/hanyaziben_app/Public/Admin/images/hanya_logo.png" />
         </a>
 
